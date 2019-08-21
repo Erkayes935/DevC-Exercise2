@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 2</title>
+</head>
+<body>
+        <h1>Kalkulator</h1>
+        <input type ="text" id="nilai1">
+        <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="x">x</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+        </select>
+        <input type ="text" id="nilai2">
+        <input type="submit" onclick="kalkulator()" value="=">
+        <input type="text" id="hasil"> 
+<script>
+function kalkulator() {
+    var nilai1 = parseInt(document.getElementById("nilai1").value);
+    var nilai2 = parseInt(document.getElementById("nilai2").value);
+    var operator = document.getElementById("operator").value;
+    var hasil = document.getElementById("hasil");
+    var total;
+    if(operator=="+") {
+    total = nilai1+nilai2;
+    }
+    else if(operator=="-")
+    {
+    total = nilai1-nilai2;
+    }
+    else if(operator=="x")
+    {
+    total = nilai1*nilai2;
+    }
+    else if(operator=="/")
+    {
+    total = nilai1/nilai2;
+    }
+    else {
+    total = nilai1%nilai2;    
+    }
+    hasil.value = total;
+    }
+</script>
+</body>
+</html>
